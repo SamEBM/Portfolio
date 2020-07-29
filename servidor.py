@@ -40,8 +40,8 @@ def submit():
             data = request.form.to_dict() # Convierte el formulario en un diccionario
             escribirExcel(data)
             return redirect('gracias.html') # Lo manda a la página de agradecimiento
-        except:
-            return "Algo salio mal, no se guardaron los datos en la base de datos."
+        except Exception as err:
+            return err.args
     else:
         return 'Algo salio mal, intentalo de nuevo'
 
