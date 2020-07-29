@@ -1,8 +1,4 @@
-# Usando FLASK
-# Activar un virtual environment desde cmd: venv\Scripts\activate.bat
-# Instalar: pip install Flask
-# set FLASK_APP=servidor.py
-# Activar la actualizacion en tiempo real: set FLASK_ENV=development
+# Cambia la direccion de la base de datos de venv/basedatos.csv a sólo basedatos.csv
 
 from flask import Flask, render_template, url_for, request, redirect
 import csv
@@ -19,7 +15,7 @@ def portfolio(pagina):
     return render_template(pagina)
 
 def escribirArchivo (datos):
-    with open('venv/basedatos.txt', mode='a') as baseDatos:
+    with open('basedatos.txt', mode='a') as baseDatos:
         email = datos["email"]
         asunto = datos["asunto"]
         mensaje = datos["mensaje"]
