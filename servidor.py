@@ -22,7 +22,7 @@ def escribirArchivo (datos):
         archivo = baseDatos.write(f'\n{email},{asunto},{mensaje}')
 
 def escribirExcel (datos):
-    with open('basedatos.csv', mode='a', newline='') as baseDatos2:
+    with open('/home/SamuelEBM/Portfolio/basedatos.csv', mode='a', newline='') as baseDatos2:
         email = datos["email"]
         asunto = datos["asunto"]
         mensaje = datos["mensaje"]
