@@ -26,7 +26,7 @@ def escribirExcel (datos):
         email = datos["email"]
         asunto = datos["asunto"]
         mensaje = datos["mensaje"]
-        csv_writer = csv.writer(baseDatos2, delimiter=',', quotechar='|', quoting= csv.QUOTE_MINIMAL)
+        csv_writer = csv.writer(baseDatos2, delimiter=',', quotechar='"', quoting= csv.QUOTE_MINIMAL)
         csv_writer.writerow([email,asunto,mensaje])
 
 @app.route('/submit_formulario', methods=['POST', 'GET'])
